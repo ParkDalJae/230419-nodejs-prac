@@ -6,5 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById("root");
+      root.appendChild(document.createElement("div"));
+      root.appendChild(document.createElement("div"));
+      root.appendChild(document.createElement("div"));
+
+      root.children[0].textContent = "헤더입니다.";
+      root.children[0].style.width = "100vw";
+      root.children[0].style.height = "100px";
+      root.children[0].style.backgroundColor = "#ccc";
+
+      root.children[1].textContent = "메인입니다.";
+      root.children[1].style.width = "100vw";
+      root.children[1].style.height = "100px";
+      root.children[1].style.backgroundColor = "#333";
+
+      root.children[2].textContent = "푸터입니다.";
+      root.children[2].style.width = "100vw";
+      root.children[2].style.height = "100px";
+      root.children[2].style.backgroundColor = "#666";
+      console.dir(root.innerHTML);
+      console.dir(root);
+    </script>
+  </body>
 </html>
